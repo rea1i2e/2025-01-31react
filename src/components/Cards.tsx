@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './Cards.css'
 import Card from './Card'
 
@@ -42,7 +42,7 @@ const cardData = [
 export default function Cards() {
   const [selectedCategory, setSelectedCategory] = useState('すべて');
 
-  const handleCategoryChange = (event) => {
+  const handleCategoryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedCategory(event.target.value);
   };
 
@@ -70,7 +70,6 @@ export default function Cards() {
           ))}
         </ul>
       </div>
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     </section>
   );
 }
